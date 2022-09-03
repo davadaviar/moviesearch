@@ -1,7 +1,7 @@
 $('.btn-search').on('click', function() {
     $.ajax({
 
-        url : 'http://www.omdbapi.com/?apikey=5a82584&s=' + $('.input-keyword').val(),
+        url : 'https://www.omdbapi.com/?apikey=5a82584&s=' + $('.input-keyword').val(),
         success : (response) => {
            
             const moviesData = response.Search;
@@ -15,7 +15,7 @@ $('.btn-search').on('click', function() {
     
             $('.movie-detail-btn').on('click', function() {
                $.ajax({
-                    url : 'http://www.omdbapi.com/?apikey=5a82584&i=' + $(this).data('imdbid'),
+                    url : 'https://www.omdbapi.com/?apikey=5a82584&i=' + $(this).data('imdbid'),
                     success : (moviesData) => {
                     
                         const movieModal = showMovieModal(moviesData);
